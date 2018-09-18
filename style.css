@@ -1,0 +1,273 @@
+/* ==== gestion des fonts ===*/
+@font-face {
+    font-family: 'Amatic-Bold';
+    src: url('fonts/Amatic-Bold.ttf');
+}
+@font-face {
+    font-family: 'cac_champagne';
+    src: url("fonts/cac_champagne.ttf");
+}
+@font-face {
+    font-family: 'ostrich-regular';
+    src: url("fonts/ostrich-regular.ttf");
+}
+@font-face {
+    font-family: 'Pacifico';
+    src: url("fonts/Pacifico.ttf");
+}
+#arial{
+    font-family: Arial;
+}
+#Amatic-Bold{
+    font-family: 'Amatic-Bold';
+}
+#cac_champagne{
+    font-family: 'cac_champagne';
+}
+
+#ostrich-regular{
+    font-family: 'ostrich-regular';
+}
+#Pacifico{
+    font-family: 'Pacifico';
+}
+#selectPolice{
+    background: #eea5ed;
+    font-weight: bold;
+    border-radius: 8px;
+}
+/*=========================*/
+body {
+    margin: 0 auto;
+    width: 700px;
+    font-family: 'Dosis';
+    background-image: url("img/back953.jpg");
+    background-size: cover;
+}
+a {
+    cursor: pointer;
+}
+/* ======== div editable =======*/
+#editor {
+    background: #fefefe;
+    box-shadow: 0 0 2px #CCC;
+    height: 150px;
+    width: 550px;
+    overflow: auto;
+    padding: 1em;
+    margin-top: 20px;
+    resize: vertical;
+    outline: none;
+}
+/*===============================*/
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.marginL{
+    margin-left: 15px;
+}
+
+.space {
+    justify-content: space-around;
+}
+.toolbar {
+    text-align: center;
+}
+
+/* ===========================*/
+/* taille bouton image */
+#bold{
+    width: 60px;
+}
+#ital{
+    width: 44px;
+}
+#under{
+    width: 40px;
+}
+#left{
+    width: 45px;
+}
+#right{
+    width: 45px;
+}
+#liste{
+    width: 35px;
+    margin-left: 6px;
+}
+#ordListe{
+    width: 45px;
+}
+#imageIN{
+    width: 40px;
+}
+#trait{
+    width: 250px;
+    margin-left: 20px;
+}
+.tailleH {
+    height: 80px;
+}
+/*==================*/
+/* taille, couleur icone */
+.fa-strikethrough{
+    font-size: 44px;
+    color: crimson;
+}
+
+.fa-align-center{
+    font-size: 45px;
+    color: blue;
+}
+.fa-smile{
+    font-size: 48px;
+    color: #ffeb0d;
+}
+.fa-link {
+    font-size: 35px;
+    color: coral;
+}
+.fa-youtube{
+    font-size: 35px;
+    color: crimson;
+}
+/* ============================ */
+/* ===== palette couleur ===========*/
+a.palette-item {
+    height: 1em;
+    border-radius: 3px;
+    margin: 2px;
+    width: 1em;
+    border: 1px solid #CCC;
+}
+
+a.palette-item:hover {
+    border: 1px solid #CCC;
+    box-shadow: 0 0 3px #333;
+}
+.toolbar a,
+.fore-wrapper,
+.back-wrapper {
+    background: none;
+    font-family: 'Candal';
+    border-radius: 1px;
+    color: black;
+    width: 1.5em;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 17px;
+    margin-right: 22px;
+}
+
+.fore-palette,
+.back-palette {
+    display: none;
+}
+
+.fore-wrapper,
+.back-wrapper {
+    display: block;
+    cursor: pointer;
+}
+
+.fore-wrapper:hover .fore-palette,
+.back-wrapper:hover .back-palette {
+    background: #fefefe;
+    display: inline-block;
+    float: left;
+    position: absolute;
+    margin-left: -25px;
+    padding: 3px;
+    width: 130px;
+    height: fit-content;
+    border-radius: 13px;
+}
+
+.fore-palette a,
+.back-palette a {
+    background: #FFF;
+    margin-bottom: 2px;
+    width: 23px;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* ======================== */
+/* ==== smileys ====== */
+.smileys{
+    width: 22px;
+    height: 22px;
+}
+.selectSmiley{
+    display: none;
+}
+/* ============== */
+/* The Modal */
+.modal {
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+}
+
+/* Modal Content */
+.modal-content {
+    overflow: auto;
+    height: 70%;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.contenue{
+    overflow: auto;
+}
+/* ===============================*/
+.sizeFont{
+    display: inline-block;
+}
+.size1{
+    font-size: 9px;
+    color: #a85ebc;
+}
+.size2{
+    font-size: 10px;
+    color: #ce59e0;
+}
+.size3{
+    font-size: 13px;
+    color: #f24be9;
+}
+.size4{
+    font-size: 16px;
+    color: #f21de4;
+}
+.size5{
+    font-size: 18px;
+    color: #f418e6;
+}
+.size6{
+    font-size: 24px;
+    color: #f704a2;
+}
+.size7{
+    font-size: 32px;
+    color: #f71372;
+}

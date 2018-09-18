@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Icone Fontawsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!--style css ordi/tablette -->
+    <link rel="stylesheet" href="style.css">
+    <!-- style css smartphone -->
+    <link rel="stylesheet" media="screen and (max-width: 640px)" href="smallscreen.css" type="text/css" />
+    <!-- JS/JQuery -->
+    <script src="js.js"></script>
+    <title>Editeur de texte Marine/Tom</title>
+</head>
+<!------------------>
+<!------------------>
+<body>
+<!------------------------- header ---------------->
+<header class="flex">
+    <!---- commande before/return---------->
+    <div class="toolbar flex-column">
+        <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
+        <a href="#" data-command='redo'><i class="fas fa-arrow-circle-right"></i></a>
+    </div>
+    <!---- div editable ----->
+    <div id='editor' contenteditable></div>
+    <!--- bouton visualisation ---->
+    <div class="flex-column marginL">
+        <a id="myBtn"><i class="fab fa-youtube"></i></a>
+        <button id="Btnstyle">Créer un style</button>
+    </div>
+    <!----Modal de visualisation --->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="contenue"></div>
+        </div>
+    </div>
+    <!---------- Modal Style --------------->
+    <div id="Modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="contenue">
+                <form>
+                    <label>Nom du stlye</label>
+                    <input type="text" id="name">
+                    Couleur Front:
+                    <input id="valeur1" type="color" name="couleur" value="">
+                    Couleur Back:
+                    <input id="valeur2" type="color" name="hexa" value="">
+                    <br><br>
+                    <select id="selectPolice">
+                        <option id="" value="b">bold</option>
+                        <option id="" value="i">italic</option>
+                        <option id="" value="u">underline</option>
+                        <option id="">strike</option>
+                    </select>
+                    <button id="button" type="submit" value="">SAVE</button>
+
+
+                </form>
+                <div id="nombreC"></div>
+
+            </div>
+        </div>
+    </div>
+</header>
+<!---------------- Header End ----------------->
+<!-------------------------------------------->
+<!--------Boite à outil ---------------------->
+<div class="toolbar">
+    <!--- section couleur back et front---->
+<div>
+<div class="flex space">
+    <div class="back-wrapper"><img src="img/color-curv.png" width="60"/>
+        <div class="back-palette">
+        </div>
+    </div>
+    <div class="fore-wrapper"><img src="img/2000px-BYR_color_wheel.svg.png" width="40"/>
+        <div class="fore-palette">
+        </div>
+    </div>
+</div>
+<!----------------------------------->
+    <!------- Choisir Font ------->
+    <div class="sizeFont">
+        <a href="#" data-command="1" title="9px"><i class="fas fa-font size1"></i></a>
+        <a href="#" data-command="2" title="10px"><i class="fas fa-font size2"></i></a>
+        <a href="#" data-command="3" title="13px"><i class="fas fa-font size3"></i></a>
+        <a href="#" data-command="4" title="16px"><i class="fas fa-font size4"></i></a>
+        <a href="#" data-command="5" title="18px"><i class="fas fa-font size5"></i></a>
+        <a href="#" data-command="6" title="24px"><i class="fas fa-font size6"></i></a>
+        <a href="#" data-command="7" title="32px"><i class="fas fa-font size7"></i></a>
+    </div>
+    <!----->
+    <!------ section bouton partie gauche --------->
+    <div class="flex space colomn">
+
+        <div class="marginleft">
+          <div>
+              <!--- commande bold , italic , underline , strike ------->
+           <div class="marginR">
+              <a href="#" class="bold" data-command='bold'><img id="bold" src="img/bold.png"/> </a>
+              <a class="ital" href="#" data-command='italic'><img id="ital" src="img/ital.png"></a>
+              <a href="#" data-command='underline'><img id="under" src="img/under.png"/></a>
+              <a href="#" data-command='strikeThrough'><i class='fa fa-strikethrough'></i></a>
+            </div>
+              <!--------- commande left , right , center , link ------>
+              <div>
+                <a href="#" data-command='justifyLeft'><img id="left" src="img/leftH.png"/></a>
+                <a href="#" data-command='justifyRight'><img id="right" src="img/thumbsR.png" ></a>
+                <a href="#" data-command='justifyCenter'><i class='fa fa-align-center'></i></a>
+                <a href="#" data-command='createlink'><i class='fa fa-link'></i></a>
+              </div>
+              <!--------- commmande liste order and unorder ,image et smiley --->
+              <div>
+                  <!--- biblio de smiley --->
+                  <div class="selectSmiley">
+                  </div>
+                  <a href="#" data-command='insertUnorderedList'><img id="liste" src="img/flickr-logo-png-3.png"/></a>
+                  <a href="#" data-command='insertOrderedList'><img id="ordListe" src="img/123.png"/></a>
+                  <a href="#" data-command='insertimage'><img id="imageIN" src="img/image.png"/></a>
+                  <a href="#"><i class="far fa-smile"></i></a>
+                </div>
+              </div>
+         </div>
+        <!---------- End section gauche ---------------->
+  <!------- section bouton partie droite ----------------------->
+        <div class="flex-column">
+            <!------------   modification H1 to H5 ------------->
+          <div class="flex">
+             <a href="#" data-command='h1'><img class="tailleH" src="img/tailleh1.png"/></a>
+             <a href="#" data-command='h2'><img class="tailleH" src="img/tailleh2.png" alt=""></a>
+             <a href="#" data-command='h3'><img class="tailleH" src="img/tailleh3.png"/></a>
+             <a href="#" data-command='h4'><img class="tailleH" src="img/tailleh4.png"/></a>
+             <a href="#" data-command='h5'><img class="tailleH" src="img/tailleh5.png"/></a>
+           </div>
+            <!--------- changement de police ---------->
+            <div>
+                <select id="selectPolice">
+                 <option id="arial">Arial</option>
+                 <option id="Amatic-Bold">Amatic-Bold</option>
+                 <option id="cac_champagne">cac_champagne</option>
+                 <option id="ostrich-regular">ostrich-regular</option>
+                 <option id="Pacifico">Pacifico</option>
+               </select>
+            </div>
+
+            <!-------- Choisir un Style --------------->
+            <select name="" id="stylee"></select>
+            <button id="style" type="button">Style</button>
+            <!----------- trait de séparation --------------->
+            <a href="#" data-command="insertHorizontalRule"><img id="trait" src="img/trait.png"/></a>
+        </div>
+        <!------------------------ End section droite bouton ------------------->
+      </div>
+    </div>
+</div>
+</body>
+</html>

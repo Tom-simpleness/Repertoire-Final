@@ -1,0 +1,246 @@
+@media screen and (max-width: 640px) {
+    /* ==== gestion des fonts ===*/
+    @font-face {
+        font-family: 'Amatic-Bold';
+        src: url('fonts/Amatic-Bold.ttf');
+    }
+    @font-face {
+        font-family: 'cac_champagne';
+        src: url("fonts/cac_champagne.ttf");
+    }
+    @font-face {
+        font-family: 'ostrich-regular';
+        src: url("fonts/ostrich-regular.ttf");
+    }
+    @font-face {
+        font-family: 'Pacifico';
+        src: url("fonts/Pacifico.ttf");
+    }
+    #arial{
+        font-family: Arial;
+    }
+    #Amatic-Bold{
+        font-family: 'Amatic-Bold';
+    }
+    #cac_champagne{
+        font-family: 'cac_champagne';
+    }
+
+    #ostrich-regular{
+        font-family: 'ostrich-regular';
+    }
+    #Pacifico{
+        font-family: 'Pacifico';
+    }
+    #selectPolice{
+        background: #eea5ed;
+        font-weight: bold;
+    }
+    /*=========================*/
+body {
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: 'Dosis';
+    background-image: url("img/back953.jpg");
+    background-size: cover;
+}
+a {
+        cursor: pointer;
+}
+
+/* ============== div editable =========*/
+    #editor {
+        background: #fefefe;
+        box-shadow: 0 0 2px #CCC;
+        height: 110px;
+        width: 210px;
+        overflow: auto;
+        margin-top: 20px;
+    }
+/*======================*/
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+.colomn{
+    display: flex;
+    flex-direction: column; !important;
+    justify-content: center;
+}
+
+.marginleft{
+    margin-left: -19px;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.marginL{
+    margin-left: 15px;
+}
+.space {
+    justify-content: center;
+}
+.toolbar {
+    text-align: center;
+}
+/* ===========================*/
+/* taille bouton image */
+#bold{
+    width: 60px;
+}
+#ital{
+    width: 44px;
+}
+#under{
+    width: 40px;
+}
+#left{
+    width: 45px;
+}
+#right{
+    width: 45px;
+}
+#liste{
+    width: 35px;
+    margin-left: 6px;
+}
+#ordListe{
+    width: 45px;
+}
+#imageIN{
+    width: 40px;
+}
+#trait{
+    width: 250px;
+    margin-left: 50px;
+}
+.tailleH {
+    margin-left: 40px;
+    height: 80px;
+}
+/*==================*/
+/* taille, couleur icone */
+    .fa-strikethrough{
+        font-size: 44px;
+        color: crimson;
+    }
+
+    .fa-align-center{
+        font-size: 45px;
+        color: blue;
+    }
+
+    .fa-link {
+        font-size: 35px;
+        color: coral;
+    }
+    .fa-youtube{
+        font-size: 35px;
+        color: crimson;
+    }
+/* ============================ */
+/* ===== palette couleur ===========*/
+    a.palette-item {
+        height: 1em;
+        border-radius: 3px;
+        margin: 2px;
+        width: 1em;
+        border: 1px solid #CCC;
+    }
+
+    a.palette-item:hover {
+        border: 1px solid #CCC;
+        box-shadow: 0 0 3px #333;
+    }
+    .toolbar a,
+.fore-wrapper,
+.back-wrapper {
+    background: none;
+    font-family: 'Candal';
+    border-radius: 1px;
+    color: black;
+    width: 1.5em;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 17px;
+    margin-right: 22px;
+
+}
+
+.fore-palette,
+.back-palette {
+    display: none;
+}
+
+.fore-wrapper,
+.back-wrapper {
+    display: block;
+    cursor: pointer;
+}
+
+.fore-wrapper:hover .fore-palette,
+.back-wrapper:hover .back-palette {
+    display: inline-block;
+    float: left;
+    position: absolute;
+    padding: 3px;
+    width: 130px;
+    background: none;
+    height: fit-content;
+    border-radius: 13px;
+    margin-left: -25px;
+    background: #fefefe;
+}
+
+.fore-palette a,
+.back-palette a {
+    background: #FFF;
+    margin-bottom: 2px;
+    width: 23px;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+
+}
+/* ======================== */
+/* ==== smileys ====== */
+
+.smileys{
+    width: 50px;
+    height: 50px;
+}
+.selectSmiley{
+    display: none;
+}
+/* ============== */
+    /* The Modal  */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 20px;
+        left: 0;
+        top: 0;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+    }
+    /* Modal Content */
+    .modal-content {
+        overflow: auto;
+        height: 70%;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    .contenue{
+        overflow: auto;
+    }
+    /* ===============================*/
+}
